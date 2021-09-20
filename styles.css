@@ -3,6 +3,8 @@
     margin: 0;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    
 }
 
 title {
@@ -18,22 +20,103 @@ main {
     flex-direction: column;
     padding: auto;
     margin: auto;
+    background-color: #FDF0D0;
 }
 
 h1{
     font-size: 4rem;
+    font-weight: 800;
     text-align: center;
+    color: #008CB5;
 }
 
 h3{
     font-size: 2rem;
+    color: #00BFEA;
+    z-index: 100;
+    padding-bottom: 4px;
 }
 
-p,button{
+#mail{
     font-size: 1rem;
-    background-color: rgb(247, 247, 247);
-    margin: 1rem;
     padding: 1rem;
     border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    width: 50%;
+    display: inline;
+    align-self: center;
 
+}
+
+#mail::before {
+    content: url(/src/iconmonstr-email-2.svg);
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+#phone{
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    width: 50%;
+    display: inline;  
+
+}
+
+#phone::before {
+    content: url(/src/iconmonstr-phone-5.svg);
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+.fw {
+    margin: 8px;
+    width: 100%;
+}
+
+div {
+    /* display: block; */
+    text-align: center;
+    background-color: transparent;
+}
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (min-width: 500px) {
+    main {
+        width: 100%;
+    }
+    #phone {
+        display: block;
+        width: 100%;
+        margin-top: -8px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    main {
+        width: 100%;
+    }
+    #phone {
+        display: inline;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    main {
+        width: 100%;
+    }
+    #phone {
+        display: inline;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    main {
+        width: 100%;
+    }
+    #phone {
+        display: inline;
+    }
 }
